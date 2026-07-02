@@ -7,6 +7,11 @@
   box-sizing: border-box;
 }
 
+::selection {
+  background: #8B5CF6;
+  color: #FFFFFF;
+}
+
 :root {
   /* Colors */
   --bg-surface: #010125;
@@ -1587,7 +1592,6 @@ body:not(.darkmode) .project-link:hover {
   line-height: 1.6;
   margin-bottom: 0;
   display: -webkit-box;
-  -webkit-line-clamp: 3;
   /* Automatically cuts extra lines elegantly */
   -webkit-box-orient: vertical;
   overflow: hidden;
