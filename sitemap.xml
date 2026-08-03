@@ -8,13 +8,4 @@
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
-
-  <!-- More Projects -->
-  <url>
-    <loc>https://devprojects.is-cool.dev/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
 </urlset>
