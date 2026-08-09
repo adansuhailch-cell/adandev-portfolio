@@ -1,0 +1,24 @@
+/* Base stypes  jo sab se phla anay hain */
+@import url('base/typography.css');
+@import url('base/variable.css');
+@import url('base/reset.css');
+
+/* Layout styles */
+@import url('layout/main-loader.css');
+@import url('layout/header.css');
+@import url('layout/navbar.css');
+@import url('layout/footer.css');
+@import url('layout/css-of-darkmode.css');
+
+/* Components styles */
+@import url('components/hero-banner.css');
+@import url('components/buttons.css');
+@import url('components/infinite-scroller.css');
+@import url('components/project-cards.css');
+@import url('components/contact-form.css');
+@import url('components/responsive.css');
+
+/* Section styles */
+@import url('section/first-section.css');
+@import url('section/right-section.css');
+@import url('section/service-section.css');

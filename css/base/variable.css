@@ -1,0 +1,18 @@
+/* For dark mode i hope :) */
+:root {
+    --bg-surface: #010125;
+    --primary: #8b5cf6;
+    --text-muted: #9ca3af;
+    --border: rgba(255, 255, 255, 0.1);
+}
+
+/* light mode */
+:root {
+    --bg: #f2f2f5;
+    --card-bg: #ffffff;
+    --text: #20232a;
+    --text-muted: #6b7280;
+    --primary: #7c3aed;
+    --border: #d6d6e0;
+    --footer: #2c3e50;
+}

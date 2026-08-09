@@ -1,0 +1,93 @@
+.left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.logo {
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
+    transition: all 0.4s ease;
+    border-radius: 6px;
+}
+
+/* text animation */
+.left span {
+    position: relative;
+    transition: color 0.4s ease;
+}
+
+/* underline animation */
+.left span::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #7f5cff, #b084ff);
+    transition: width 0.4s ease;
+}
+
+/* 🔥 HOVER EFFECT */
+.left:hover .logo {
+    transform: rotate(-8deg) scale(1.15);
+    filter: drop-shadow(0 0 10px rgba(127, 92, 255, 0.8));
+}
+
+.left:hover span {
+    color: #b084ff;
+}
+
+.left:hover span::after {
+    width: 100%;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-4px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.logo {
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Mobile devices */
+@media (max-width: 768px) {
+
+    .left:active .logo,
+    .left:focus .logo {
+        transform: scale(1.15);
+        filter: drop-shadow(0 0 12px rgba(127, 92, 255, 0.8));
+    }
+
+    .left:active span,
+    .left:focus span {
+        color: #b084ff;
+    }
+
+    .left:active span::after,
+    .left:focus span::after {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .logo {
+        filter: drop-shadow(0 0 8px rgba(127, 92, 255, 0.5));
+    }
+}
