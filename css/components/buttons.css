@@ -1,0 +1,244 @@
+.buttons {
+    display: flex;
+    gap: 18px;
+    margin-top: 30px;
+    perspective: 900px;
+}
+
+.btn {
+    width: 190px;
+    max-width: 100%;
+    height: 52px;
+    border-radius: 14px;
+    border: 2px solid #2b0a3d;
+    background: linear-gradient(135deg, #5a189a, #370d5e);
+    position: relative;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+    box-shadow:
+        0 10px 0 #32055a,
+        0 18px 30px rgba(0, 0, 0, 0.35);
+    overflow: hidden;
+}
+
+.btn a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+/* red blue green white yellow */
+
+
+/* blue Yaha par sara wo code ha jo buttons ko special effects deta ha :) */
+/* 3D base layer */
+.btn::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: linear-gradient(135deg, #9d4edd, #7b2cbf);
+    transform: translateZ(-14px);
+    transition: all 0.3s ease;
+}
+
+/* Light reflection */
+.btn::after {
+    content: "";
+    position: absolute;
+    top: -70%;
+    left: -40%;
+    width: 180%;
+    height: 180%;
+    background: linear-gradient(120deg,
+            transparent 35%,
+            rgba(255, 255, 255, 0.25),
+            transparent 65%);
+    transition: transform 0.6s ease;
+    background: linear-gradient(135deg, #5a189a, #240046);
+}
+
+/* Hover */
+.btn:hover {
+    transform: translateY(-6px) rotateX(14deg);
+    box-shadow:
+        0 16px 0 #12001f,
+        0 28px 45px rgba(0, 0, 0, 0.45);
+}
+
+.btn:hover::after {
+    transform: translateX(50%);
+}
+
+.btn:active {
+    transform: translateY(3px);
+    box-shadow:
+        0 6px 0 #12001f,
+        0 12px 20px rgba(0, 0, 0, 0.35);
+}
+
+/* red Special effects wala code yaha par khatam hota ha  */
+
+/* red blue green white yellow */
+
+/* blue Yaha par sarii media queries rakho jo bhi hain chahay wo buttons ki houn ya theme switch kii sab yahii par rakho ok  */
+@media (max-width: 768px) {
+    .buttons {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .btn {
+        width: 50%;
+        max-width: 200px;
+    }
+
+    .btn:hover {
+        transform: translateY(-6px);
+        /* less tilt on mobile */
+    }
+
+    #theme-switch {
+        top: auto;
+        bottom: 20px;
+        right: 20px;
+        z-index: 1002;
+    }
+}
+
+/* red Yaha tak sarii media queries end ho gaii hain  */
+
+/* red blue green white yellow */
+
+
+/* blue Light and dark mode button :) theme-switch*/
+#theme-switch {
+    height: 50px;
+    width: 50px;
+    padding: 0;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg-surface);
+    position: fixed;
+    top: 14px;
+    right: 20px;
+    z-index: 1002;
+    cursor: pointer;
+}
+
+/* Light mode (moon) */
+#theme-switch #moon {
+    fill: snow;
+}
+
+/* Hide sun in light mode */
+#theme-switch svg:first-child {
+    display: none;
+}
+
+/* yaha par theme-switch ka sara mane code khatam ho gya ha  */
+
+/* red blue green white yellow */
+
+
+/* blue yaha par wo sara code ha jo light and dark mode ma buttons ka liyay use hota ha  */
+body:not(.darkmode) .btn {
+    background: linear-gradient(135deg, var(--card-bg), var(--bg));
+    border: 2px solid var(--border);
+    box-shadow:
+        0 6px 0 var(--border),
+        0 12px 22px rgba(0, 0, 0, 0.2);
+}
+
+body:not(.darkmode) .btn a {
+    color: var(--text);
+}
+
+body:not(.darkmode) .btn::before {
+    background: linear-gradient(135deg, var(--text-muted), var(--text));
+}
+
+body:not(.darkmode) .btn::after {
+    background:
+        linear-gradient(135deg, var(--text-muted), var(--card-bg)),
+        transparent 65%;
+}
+
+body:not(.darkmode) .btn:hover {
+    box-shadow:
+        0 12px 0 var(--text-muted),
+        0 22px 40px rgba(0, 0, 0, 0.25);
+}
+
+/* Press */
+body:not(.darkmode) .btn:active {
+    box-shadow:
+        0 4px 0 var(--text-muted),
+        0 8px 14px rgba(0, 0, 0, 0.2);
+}
+
+/* light mode  buttons */
+body:not(.darkmode) .btn {
+    border: 2px solid var(--border);
+    background: var(--card-bg);
+    box-shadow:
+        0 10px 0 var(--border),
+        0 18px 30px rgba(0, 0, 0, 0.25);
+}
+
+body:not(.darkmode) .btn a {
+    color: var(--text);
+}
+
+body:not(.darkmode) .btn::before {
+    background: var(--bg);
+}
+
+body:not(.darkmode) .btn:hover {
+    transform: translateY(-6px) rotateX(12deg);
+    box-shadow:
+        0 16px 0 var(--border),
+        0 28px 45px rgba(0, 0, 0, 0.35);
+}
+
+body:not(.darkmode) .btn:active {
+    transform: translateY(3px);
+    box-shadow:
+        0 6px 0 var(--border),
+        0 12px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* Dark mode (sun) */
+body.darkmode #theme-switch {
+    background-color: #f8efc9;
+    box-shadow: 0 0 10px rgba(208, 190, 58, 0.6);
+}
+
+/* Sun icon visible in dark mode */
+.darkmode #theme-switch svg:first-child {
+    display: block;
+    fill: #d1b61b;
+}
+
+/* Hide moon in dark mode */
+.darkmode #theme-switch svg:last-child {
+    display: none;
+}
+
+/* red yaha par sara dark mode wala code bhi khatam ho gya ha  */
+
+/* red blue green white yellow */

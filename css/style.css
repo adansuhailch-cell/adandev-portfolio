@@ -48,8 +48,6 @@ h3 {
 }
 
 /* Lading progresstartup */
-/* ===== LOADER ===== */
-
 #loader {
   position: fixed;
   inset: 0;
@@ -550,14 +548,6 @@ nav ul li a:hover {
 
 body:not(.darkmode) .right.active {
   background-color: #e8e8e8;
-}
-
-/* ye css shuru ma header section ma jo js lgaya ha auto type us k liyay ha */
-.typed-cursor {
-  color: #bfc3ff;
-  /* Aapka theme color */
-  text-shadow: 0 0 10px #1e2167;
-  font-weight: bold;
 }
 
 .firstsection {
