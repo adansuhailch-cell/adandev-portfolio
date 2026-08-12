@@ -189,6 +189,16 @@
     background-color: #e1306c;
 }
 
+.icon[aria-label="Spotify"]:hover,
+.icon[aria-label="Spotify"]:focus,
+.icon[aria-label="Spotify"]:active {
+    color: #1ED760;
+}
+
+.icon[aria-label="Spotify"]::after {
+    background-color: #1DB954;
+}
+
 .icon[aria-label="LinkedIn"]:hover,
 .icon[aria-label="LinkedIn"]:focus,
 .icon[aria-label="LinkedIn"]:active {

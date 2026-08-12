@@ -20,5 +20,6 @@
 
 /* Section styles */
 @import url('section/first-section.css');
+@import url('section/experience-section.css');
 @import url('section/right-section.css');
 @import url('section/service-section.css');

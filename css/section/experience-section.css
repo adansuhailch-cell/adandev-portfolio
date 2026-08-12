@@ -1,0 +1,66 @@
+/* experience section */
+.experience-section {
+    max-width: 1200px;
+    margin: auto;
+    padding: 40px 6vw;
+}
+
+
+.experience-section h1 {
+    font-size: clamp(1.8rem, 3vw, 2.6rem);
+    margin-bottom: 40px;
+}
+
+.experience-section .box {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    position: relative;
+    flex-wrap: wrap;
+}
+
+.experience-section .box::before {
+    content: "";
+    position: absolute;
+    top: 25px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: #f5f5f5;
+}
+
+.vertical-lines {
+    position: relative;
+    width: 220px;
+    padding-top: 85px;
+}
+
+.vertical-lines::before {
+    content: "";
+    position: absolute;
+    top: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 60px;
+    background: #fff;
+}
+
+.image-top {
+    width: 50px;
+    position: absolute;
+    top: -23px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.vertical-tittle {
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.vertical-desc {
+    font-size: 0.8rem;
+    color: #ccc;
+}
