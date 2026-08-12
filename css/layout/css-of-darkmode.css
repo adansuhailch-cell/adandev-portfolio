@@ -1,4 +1,13 @@
 /* All css of all the portfolio conponents and others is here ,, aur mera plan ya ha ka abhi to in ko yahi hi rakhta houn lkin aishta aishta in ko in ka componetnts ka sath attach kar doun ga jasa footer ka phla light mode ka css aii ga phir us ka nichay hi dark mode ka css a gaii ga lkin abhi ka liya sara code yahi rakh rha houn phri aishta aishta is ko theek karoaun ga INSHAALLAH :) */
+
+
+:root {
+    --neon-purple: #8a2be2;
+    --neon-glow: rgba(138, 43, 226, 0.4);
+    --card-bg-dark: rgba(13, 13, 24, 0.75);
+    --card-border-dark: rgba(255, 255, 255, 0.05);
+}
+
 body:not(.darkmode) {
     background: #f7f7ff;
     color: var(--text);
@@ -221,6 +230,70 @@ body:not(.darkmode) .footer-col-contact .contact-label {
     color: #6b7280;
     margin: 6px 0 2px;
     font-weight: 600;
+}
+
+/* this is for project cards */
+
+
+body:not(.darkmode) .project-card {
+    background: #a59c9c;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+}
+
+body:not(.darkmode) .project-card:hover {
+    border-color: var(--neon-purple, blueviolet);
+    box-shadow: 15px 30px 40px rgba(138, 43, 226, 0.12), 7px 15px 20px rgba(0, 0, 0, 0.05);
+}
+
+
+
+body:not(.darkmode) .project-title {
+    color: #0f172a;
+    /* Dark charcoal color header ke liye */
+}
+
+body:not(.darkmode) .project-desc {
+    color: black;
+}
+
+body:not(.darkmode) .tag {
+    background: rgba(138, 43, 226, 0.08);
+    color: var(--neon-purple, blueviolet);
+    border-color: rgba(138, 43, 226, 0.2);
+}
+
+body:not(.darkmode) .project-link.code-btn {
+    background: #24292E;
+    color: #b2c4d8 !important;
+    border-color: rgba(0, 0, 0, 0.08);
+}
+
+body:not(.darkmode) p {
+    color: black;
+}
+
+
+body:not(.darkmode) .project-card {
+    background: #e7e6e6;
+    color: #0b0b45;
+}
+
+/* experience section */
+body:not(.darkmode) .experience-section .text-gray {
+    color: var(--bg-surface);
+}
+
+body:not(.darkmode) .box .vertical-desc {
+    color: var(--text);
+}
+
+body:not(.darkmode) .box .vertical-lines::before {
+    background: var(--text);
+}
+
+/* projects */
+body:not(.darkmode) .projects-header-reveal h2 {
+    color: var(--text);
 }
 
 body:not(.darkmode) .footer-col-contact .contact-link {
