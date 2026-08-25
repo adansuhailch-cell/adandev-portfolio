@@ -93,33 +93,6 @@
 
 /* red blue green white yellow */
 
-/* blue Yaha par sarii media queries rakho jo bhi hain chahay wo buttons ki houn ya theme switch kii sab yahii par rakho ok  */
-@media (max-width: 768px) {
-    .buttons {
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-    }
-
-    .btn {
-        width: 50%;
-        max-width: 200px;
-    }
-
-    .btn:hover {
-        transform: translateY(-6px);
-        /* less tilt on mobile */
-    }
-
-    #theme-switch {
-        top: auto;
-        bottom: 20px;
-        right: 20px;
-        z-index: 1002;
-    }
-}
-
-/* red Yaha tak sarii media queries end ho gaii hain  */
 
 /* red blue green white yellow */
 
@@ -243,3 +216,38 @@ body.darkmode #theme-switch {
 /* red yaha par sara dark mode wala code bhi khatam ho gya ha  */
 
 /* red blue green white yellow */
+/* blue Yaha par sarii media queries rakho jo bhi hain chahay wo buttons ki houn ya theme switch kii sab yahii par rakho ok  */
+
+
+/* red Yaha tak sarii media queries end ho gaii hain  */
+/* Paste this at the very bottom of your style sheet */
+@media (max-width: 768px) {
+
+    .buttons {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .btn {
+        width: 50%;
+        max-width: 200px;
+    }
+
+    .btn:hover {
+        transform: translateY(-6px);
+    }
+
+    #theme-switch {
+        position: fixed;
+        /* Unlinks it from the header and keeps it on screen */
+        top: auto !important;
+        /* Overrides any desktop "top" positions */
+        bottom: 30px;
+        /* Spacing from the very bottom edge */
+        right: 20px;
+        /* Spacing from the right edge */
+        z-index: 1002;
+        /* Keeps it floating above content and background shapes */
+    }
+}
